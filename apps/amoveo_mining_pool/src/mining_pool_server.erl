@@ -38,7 +38,7 @@ problem_api_mimic() ->
     Hash = D#data.hash,
     Nonce = D#data.nonce,
     Diff = D#data.diff,
-    {ok, [Hash, Nonce, Diff]}.
+    {ok, [Hash, Nonce, Diff, Diff]}.
 new_problem() -> gen_server:call(?MODULE, new_problem).
 start_cron() ->
     %This checks every 0.1 seconds, to see if it is time to get a new problem.
